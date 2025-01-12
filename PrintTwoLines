@@ -1,0 +1,48 @@
+// A simple Java program to simulate a notification system
+public class Main {
+
+    public static void main(String[] args) {
+        // Start the notification process
+        System.out.println("Starting Notification System...");
+
+        // Call the method to send notification
+        sendNotification();
+
+        // Call the method to receive notification
+        receiveNotification();
+
+        // End of program
+        System.out.println("Notification process completed.");
+    }
+
+    /**
+     * Simulates sending a notification.
+     */
+    public static void sendNotification() {
+        try {
+            // Simulate the process of sending a notification
+            System.out.println("Preparing to send notification...");
+            Thread.sleep(1000); // Simulating some processing delay
+            System.out.println("Notification sent successfully!");
+        } catch (InterruptedException e) {
+            // Handle the exception if the thread is interrupted
+            System.out.println("Error during notification sending: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Simulates receiving a notification.
+     */
+    public static void receiveNotification() {
+        try {
+            // Simulate a delay before receiving the notification
+            Thread.sleep(2000); // Adding 2-second gap after sending
+            System.out.println("Processing received notification...");
+            Thread.sleep(1000); // Simulating some processing delay
+            System.out.println("Notification received successfully!");
+        } catch (InterruptedException e) {
+            // Handle the exception if the thread is interrupted
+            System.out.println("Error during notification receiving: " + e.getMessage());
+        }
+    }
+}
